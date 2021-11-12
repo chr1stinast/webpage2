@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        .center {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            width: 50%;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        ol {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+        input {
+            background-color: rgb(161, 214, 181);
+            width: 400px;
+        }
+        body {
+            background: linear-gradient(to bottom, rgb(255, 255, 255) 15%, rgb(173, 173, 173) 60%, rgb(153, 153, 153) 80%);
+            height: 693px;
+            display: fill;
+        }
+    </style>
+</head>
+<body>
+    <ol class="center">
+        <p>What is your name? </p>
+        <input type="text" id="nameInput">
+        <p>What is your favorite color? </p>
+        <input type="text" id="colorInput">
+        <p>What is your favorite animal? </p>
+        <input type="text" id="animalInput">
+        <p>Who is your number 1 spotify artist?</p>
+        <input type="text" id = "artistInput">
+        <p>What is your favorite game?</p>
+        <input type="text" id = "gameInput">
+        <p>
+            <button>SUBMIT</button>
+        </p>
+    </ol>
+
+    <script>
+        let name = document.querySelector("#nameInput");
+        let color = document.querySelector("#colorInput")
+        let animal = document.querySelector("#animalInput")
+        let artist = document.querySelector("#artistInput")
+        let game = document.querySelector("#gameInput")
+
+        function hello1() {
+            let score = "";
+            if (name.value == "Hello" || name.value == "hello") {
+                score += name.value + ": You think you're funny, right? Well, you're not."
+            }
+            else if (color.value == "black") {
+                score += color.value + ": EMO ALERT...🚨🖤"
+            }
+            else if (animal.value == "pig") {
+                score += animal.value + ": I agree!"
+            }
+            else if (artist.value == "MCR") {
+                score += artist.value + ": LITERAL EMO."
+            }
+            alert(score);
+        }
+
+        let button = document.querySelector("button");
+        button.addEventListener("click", hello1);
+
+    </script>
+</body>
+</html>

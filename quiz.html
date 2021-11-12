@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+            text-align: center;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        .redbox {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            background-color: red;
+            border-radius: 10%;
+            height: 100px;
+            width: 400px;
+            font-size: 40px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: white;
+        }
+        img {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div class="redbox">Pick a Drink</div>
+        <img id="coffee" src="images/coffee.jpg" alt="">
+        <img id="gatorade" src="images/gatorade.jpeg" alt="">
+        <img id="water" src="images/water.jpg" alt="">
+    </div>
+    <script>
+        let coffee = document.querySelector("#coffee");
+        let gatorade = document.querySelector("#gatorade");
+        let water = document.querySelector("#water");
+        let score = 0;
+        coffee.addEventListener("click", function(event) {
+            coffee.src = "images/water.jpg";
+            alert("You must be tired, take some water.");
+        })
+        gatorade.addEventListener("click", function(event) {
+            gatorade.src = "images/water.jpg";
+            alert("Don't dehydrate yourself, water is healthier.");
+        })
+        water.addEventListener("click", function(event) {
+            alert("Good choice!");
+        })
+    </script>
+</body>
+</html>
