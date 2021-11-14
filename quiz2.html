@@ -4,75 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question 1</title>
-    <style>
-        body {
-            background-color: antiquewhite;
-            text-align: center;
-        }
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-        }
-        .redbox {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-            background-color: red;
-            border-radius: 3%;
-            height: 50px;
-            width: 400px;
-            font-size: 40px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-            color: white;
-            padding:20px;
-        }
-        img {
-            position: relative;
-            width: 300px;
-            height: 300px;
-        }
-    </style>
+    <title>Question 2</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="index.html">Go back to home.</a>
+    <a href="index.html" style="font-family: Arial, Helvetica, sans-serif; color: black">Go back to home.</a>
     <div class="center">
         <div class="redbox">Pick a snack</div>
         <img id="chips" src="images/chips.jpg" alt="">
         <img id="cookie" src="images/cookie.jpg" alt="">
         <img id="kitkat" src="images/kitkat.jpg" alt="">
-        <img id="m&m" src="images/m&m.jpeg" alt="">
+        <img id="mm" src="images/m&m.jpeg" alt="">
     </div>
-    <button id="next">NEXT</button>
+    <button id="back">BACK</button>
     <script>
         let chips = document.querySelector("#chips");
         let cookie = document.querySelector("#cookie");
         let kitkat = document.querySelector("#kitkat");
-        let mm = document.querySelector("#m&m");
-        let button1 = document.querySelector("#next");
-        let score = 0;
+        let mm = document.querySelector("#mm");
+        let button1 = document.querySelector("#back");
         chips.addEventListener("click", function(event) {
-            chips.src = "images/water.jpg";
-            alert("You must be tired, take some water.");
+            //alert("Personally, lays are too salty. But whatever you want ig.");
+            alert("Yummy salty potatoes 😍😍")
         })
         cookie.addEventListener("click", function(event) {
-            cookie.src = "images/water.jpg";
-            alert("Don't dehydrate yourself, water is healthier.");
+            alert("Smells like childhood.");
         })
         kitkat.addEventListener("click", function(event) {
-            alert("Good choice!");
+            alert("You better break them in half and not bite straight into them...");
         })
         mm.addEventListener("click", function(event) {
-            alert("Only option other than water that's good for you...");
-            alert("Too bad, take water.");
-            mm.src = "images/water.jpg";
+            alert("I have no personal opinon on this.");
         })
         button1.addEventListener("click", function(event) {
-            location.href = "quiz2.html";
+            location.href ="quiz.html";
         })
     </script>
 </body>
