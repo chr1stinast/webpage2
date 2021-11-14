@@ -41,33 +41,38 @@
 <body>
     <a href="index.html">Go back to home.</a>
     <div class="center">
-        <div class="redbox">Pick a Drink</div>
-        <img id="coffee" src="images/coffee.jpg" alt="">
-        <img id="gatorade" src="images/gatorade.jpeg" alt="">
-        <img id="water" src="images/water.jpg" alt="">
-        <img id="tea" src="images/tea.jpeg" alt="">
+        <div class="redbox">Pick a snack</div>
+        <img id="chips" src="images/chips.jpg" alt="">
+        <img id="cookie" src="images/cookie.jpg" alt="">
+        <img id="kitkat" src="images/kitkat.jpg" alt="">
+        <img id="m&m" src="images/m&m.jpeg" alt="">
     </div>
+    <button id="next">NEXT</button>
     <script>
-        let coffee = document.querySelector("#coffee");
-        let gatorade = document.querySelector("#gatorade");
-        let water = document.querySelector("#water");
-        let tea = document.querySelector("#tea");
+        let chips = document.querySelector("#chips");
+        let cookie = document.querySelector("#cookie");
+        let kitkat = document.querySelector("#kitkat");
+        let mm = document.querySelector("#m&m");
+        let button1 = document.querySelector("#next");
         let score = 0;
-        coffee.addEventListener("click", function(event) {
-            coffee.src = "images/water.jpg";
+        chips.addEventListener("click", function(event) {
+            chips.src = "images/water.jpg";
             alert("You must be tired, take some water.");
         })
-        gatorade.addEventListener("click", function(event) {
-            gatorade.src = "images/water.jpg";
+        cookie.addEventListener("click", function(event) {
+            cookie.src = "images/water.jpg";
             alert("Don't dehydrate yourself, water is healthier.");
         })
-        water.addEventListener("click", function(event) {
+        kitkat.addEventListener("click", function(event) {
             alert("Good choice!");
         })
-        tea.addEventListener("click", function(event) {
+        mm.addEventListener("click", function(event) {
             alert("Only option other than water that's good for you...");
             alert("Too bad, take water.");
-            tea.src = "images/water.jpg";
+            mm.src = "images/water.jpg";
+        })
+        button1.addEventListener("click", function(event) {
+            location.href = "quiz2.html";
         })
     </script>
 </body>

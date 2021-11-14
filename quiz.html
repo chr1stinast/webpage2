@@ -54,7 +54,6 @@
         let water = document.querySelector("#water");
         let tea = document.querySelector("#tea");
         let button1 = document.querySelector("#next");
-        let score = 0;
         coffee.addEventListener("click", function(event) {
             coffee.src = "images/water.jpg";
             alert("You must be tired, take some water.");
@@ -65,6 +64,7 @@
         })
         water.addEventListener("click", function(event) {
             alert("Good choice!");
+            location.href = "quiz2.html";
         })
         tea.addEventListener("click", function(event) {
             alert("Only option other than water that's good for you...");
